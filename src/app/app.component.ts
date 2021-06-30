@@ -6,13 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'my-first-app';
-  userName = '';
-  showSecret = false;
-  log: number[] = [];
-
-  onToggleDetail() {
-    this.showSecret = !this.showSecret;
-    this.log.push(this.log.length + 1);
+  loadedFeature = 'recepie'
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
   }
 }
